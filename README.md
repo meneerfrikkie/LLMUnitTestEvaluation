@@ -33,7 +33,8 @@ This repository contains scripts and data files related to the ELEN4010 Individu
 1. `testResults.txt`: File containing test results.
 2. `database.pdf`: PDF version of the project database.
 3. `database.csv`: CSV version of the project database.
-4. `report.pdf`: A copy of the Investigation Report.
+4. `database.xlsx`: Excel version of the project database.
+5. `report.pdf`: A copy of the Investigation Report.
 
 ---
 
