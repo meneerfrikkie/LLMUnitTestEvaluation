@@ -1,7 +1,8 @@
-# ELEN4010 Individual Project
+# Exploring Claude AI's Capability in Unit Test Generation: An Investigative Study
+## ELEN4010: Individual Project
 
 ## Author
-Muaawiyah Dadabhay  
+Muaawiyah Dadabhay (https://github.com/meneerfrikkie)
 Student Number: 2426234  
 
 ---
@@ -31,15 +32,21 @@ The script `loadHumanEval.py` has been provided by T. Kolia (Student Number: 242
 
 ## Usage
 
-1. Ensure Python and Bash environments are set up.
-2. Execute `loadHumanEval.py` by running: `python loadHumanEval.py`
-3. Execute `generateUnitTests.py` by running: `python generateUnitTests.py`
-4. Execute `runTests.sh` by running: `./runTests.sh`
-5. View generated outputs in `testResults.txt`.
-6. Utilize `database.pdf` and `database.csv` for reference or analysis.
+1. **Prerequisites:**
+   - Ensure Python is installed on your system.
+   - Install pytest and pytest-cov by running:
+     ```bash
+     pip install pytest pytest-cov
+     ```
+   - Obtain an API key from Anthropics. You can activate the API in the environment via:
+     ```bash
+     export ANTHROPIC_API_KEY="your_api_key"
+     ```
 
----
+2. **Running the scripts:**
+   - Execute `loadHumanEval.py` by running: `python loadHumanEval.py`
+   - Execute `generateUnitTests.py` by running: `python generateUnitTests.py`
+   - Execute `runTests.sh` by running: `./runTests.sh`
+   - View generated outputs in `testResults.txt`.
+   - Utilize `database.pdf` and `database.csv` for reference or analysis.
 
-## Contributors
-
-- Muaawiyah Dadabhay (https://github.com/meneerfrikkie)
