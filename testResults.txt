@@ -1,0 +1,1389 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program1/program1_test.py ...F                                           [100%]
+
+=================================== FAILURES ===================================
+___________________ test_has_close_elements[numbers3-5-True] ___________________
+
+numbers = [10, 20, 25], threshold = 5, expected = True
+
+    @pytest.mark.parametrize("numbers, threshold, expected", [
+        ([1, 2, 3, 4], 0.5, False),
+        ([1, 2, 3, 3.1], 0.5, True),
+        ([10, 20, 30], 5, False),
+        ([10, 20, 25], 5, True)
+    ])
+    def test_has_close_elements(numbers, threshold, expected):
+>       assert has_close_elements(numbers, threshold) == expected
+E       assert False == True
+E        +  where False = has_close_elements([10, 20, 25], 5)
+
+program1/program1_test.py:11: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program1/program1.py            8      0      8      0   100%
+program1/program1_test.py       5      0      2      0   100%
+-------------------------------------------------------------
+TOTAL                          13      0     10      0   100%
+
+=========================== short test summary info ============================
+FAILED program1/program1_test.py::test_has_close_elements[numbers3-5-True] - ...
+========================= 1 failed, 3 passed in 0.14s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program2/program2_test.py ..F.F                                          [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_nested_parens ______________________________
+
+    def test_nested_parens():
+>       assert decompose("(()())") == ["()", "(())"]
+E       AssertionError: assert ['(()())'] == ['()', '(())']
+E         
+E         At index 0 diff: '(()())' != '()'
+E         Right contains one more item: '(())'
+E         Use -v to get more diff
+
+program2/program2_test.py:11: AssertionError
+______________________________ test_invalid_input ______________________________
+
+    def test_invalid_input():
+>       with pytest.raises(IndexError):
+E       Failed: DID NOT RAISE <class 'IndexError'>
+
+program2/program2_test.py:17: Failed
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program2/program2.py           15      0      8      1    96%
+program2/program2_test.py      13      0      2      0   100%
+-------------------------------------------------------------
+TOTAL                          28      0     10      1    97%
+
+=========================== short test summary info ============================
+FAILED program2/program2_test.py::test_nested_parens - AssertionError: assert...
+FAILED program2/program2_test.py::test_invalid_input - Failed: DID NOT RAISE ...
+========================= 2 failed, 3 passed in 0.17s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program3/program3_test.py ....                                           [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program3/program3.py            2      1      0      0    50%
+program3/program3_test.py      13      0      2      0   100%
+-------------------------------------------------------------
+TOTAL                          15      1      2      0    94%
+
+
+============================== 4 passed in 0.14s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program4/program4_test.py ....                                           [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program4/program4.py            7      0      4      0   100%
+program4/program4_test.py      10      0      0      0   100%
+-------------------------------------------------------------
+TOTAL                          17      0      4      0   100%
+
+
+============================== 4 passed in 0.14s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program5/program5_test.py .                                              [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program5/program5.py            3      0      2      0   100%
+program5/program5_test.py      14      0      2      0   100%
+-------------------------------------------------------------
+TOTAL                          17      0      4      0   100%
+
+
+============================== 1 passed in 0.15s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program6/program6_test.py .....                                          [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program6/program6.py            9      0      4      0   100%
+program6/program6_test.py      12      0      0      0   100%
+-------------------------------------------------------------
+TOTAL                          21      0      4      0   100%
+
+
+============================== 5 passed in 0.15s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 7 items
+
+program7/program7_test.py ..FFFF.                                        [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_balanced_parens _____________________________
+
+    def test_balanced_parens():
+>       assert parse_paren_group('()(()())') == 3
+E       AssertionError: assert 2 == 3
+E        +  where 2 = parse_paren_group('()(()())')
+
+program7/program7_test.py:11: AssertionError
+____________________________ test_unbalanced_parens ____________________________
+
+    def test_unbalanced_parens():
+>       assert parse_paren_group('(()') == 1
+E       AssertionError: assert 2 == 1
+E        +  where 2 = parse_paren_group('(()')
+
+program7/program7_test.py:14: AssertionError
+______________________________ test_nested_parens ______________________________
+
+    def test_nested_parens():
+>       assert parse_paren_group('((()))(())()()(()())') == 4
+E       AssertionError: assert 3 == 4
+E        +  where 3 = parse_paren_group('((()))(())()()(()())')
+
+program7/program7_test.py:17: AssertionError
+_____________________________ test_multiple_groups _____________________________
+
+    def test_multiple_groups():
+        paren_string = '(()) () ((())) () (())'
+        expected = [2, 0, 3, 0, 2]
+>       assert parse_paren_group(paren_string) == expected
+E       AssertionError: assert 2 == [2, 0, 3, 0, 2]
+E        +  where 2 = parse_paren_group('(()) () ((())) () (())')
+
+program7/program7_test.py:22: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program7/program7.py            9      0      4      0   100%
+program7/program7_test.py      19      0      2      0   100%
+-------------------------------------------------------------
+TOTAL                          28      0      6      0   100%
+
+=========================== short test summary info ============================
+FAILED program7/program7_test.py::test_balanced_parens - AssertionError: asse...
+FAILED program7/program7_test.py::test_unbalanced_parens - AssertionError: as...
+FAILED program7/program7_test.py::test_nested_parens - AssertionError: assert...
+FAILED program7/program7_test.py::test_multiple_groups - AssertionError: asse...
+========================= 4 failed, 3 passed in 0.21s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 3 items
+
+program8/program8_test.py ...                                            [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program8/program8.py            2      0      2      0   100%
+program8/program8_test.py       5      0      2      0   100%
+-------------------------------------------------------------
+TOTAL                           7      0      4      0   100%
+
+
+============================== 3 passed in 0.15s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program9/program9_test.py ...F                                           [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_negative_numbers _____________________________
+
+    def test_negative_numbers():
+>       assert sum_and_prod([-1, -2, 3]) == (0, -6)
+E       assert (0, 6) == (0, -6)
+E         
+E         At index 1 diff: 6 != -6
+E         Use -v to get more diff
+
+program9/program9_test.py:14: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                        Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------------
+program9/program9.py            7      0      2      0   100%
+program9/program9_test.py      10      0      0      0   100%
+-------------------------------------------------------------
+TOTAL                          17      0      2      0   100%
+
+=========================== short test summary info ============================
+FAILED program9/program9_test.py::test_negative_numbers - assert (0, 6) == (0...
+========================= 1 failed, 3 passed in 0.16s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program10/program10_test.py .....                                        [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program10/program10.py            9      0      4      0   100%
+program10/program10_test.py      22      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            31      0      4      0   100%
+
+
+============================== 5 passed in 0.16s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting program11/program11_test.py _________________
+ImportError while importing test module '/Users/muaawiyah/Desktop/humaneval/program11/program11_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/anaconda3/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+program11/program11_test.py:2: in <module>
+    from program11 import make_palindrome
+E   ImportError: cannot import name 'make_palindrome' from 'program11' (/Users/muaawiyah/Desktop/humaneval/program11/program11.py)
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program11/program11.py            7      6      4      0     9%
+program11/program11_test.py      21     19      6      0     7%
+---------------------------------------------------------------
+TOTAL                            28     25     10      0     8%
+
+=========================== short test summary info ============================
+ERROR program11/program11_test.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.33s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program12/program12_test.py ..FFF                                        [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_xor_with_strings _____________________________
+
+    def test_xor_with_strings():
+>       with pytest.raises(TypeError):
+E       Failed: DID NOT RAISE <class 'TypeError'>
+
+program12/program12_test.py:13: Failed
+__________________________ test_xor_lists[a0-b0-0101] __________________________
+
+a = [0, 1, 0, 1], b = [0, 1, 1, 0], expected = '0101'
+
+    @pytest.mark.parametrize("a,b,expected", [
+        ([0, 1, 0, 1], [0, 1, 1, 0], "0101"),
+        ([1, 0, 1], [1, 1, 0], "110")
+    ])
+    def test_xor_lists(a, b, expected):
+>       assert xor(a, b) == expected
+E       AssertionError: assert '1' == '0101'
+E         
+E         - 0101
+E         + 1
+
+program12/program12_test.py:21: AssertionError
+__________________________ test_xor_lists[a1-b1-110] ___________________________
+
+a = [1, 0, 1], b = [1, 1, 0], expected = '110'
+
+    @pytest.mark.parametrize("a,b,expected", [
+        ([0, 1, 0, 1], [0, 1, 1, 0], "0101"),
+        ([1, 0, 1], [1, 1, 0], "110")
+    ])
+    def test_xor_lists(a, b, expected):
+>       assert xor(a, b) == expected
+E       AssertionError: assert '1' == '110'
+E         
+E         - 110
+E         + 1
+
+program12/program12_test.py:21: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program12/program12.py            4      0      2      0   100%
+program12/program12_test.py      14      0      4      0   100%
+---------------------------------------------------------------
+TOTAL                            18      0      6      0   100%
+
+=========================== short test summary info ============================
+FAILED program12/program12_test.py::test_xor_with_strings - Failed: DID NOT R...
+FAILED program12/program12_test.py::test_xor_lists[a0-b0-0101] - AssertionErr...
+FAILED program12/program12_test.py::test_xor_lists[a1-b1-110] - AssertionErro...
+========================= 3 failed, 2 passed in 0.18s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program13/program13_test.py .                                            [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program13/program13.py            7      0      8      1    93%
+program13/program13_test.py       8      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            15      0      8      1    96%
+
+
+============================== 1 passed in 0.13s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program14/program14_test.py .                                            [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program14/program14.py            4      0      2      0   100%
+program14/program14_test.py       5      0      2      0   100%
+---------------------------------------------------------------
+TOTAL                             9      0      4      0   100%
+
+
+============================== 1 passed in 0.12s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program15/program15_test.py FFFF                                         [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_empty_string _______________________________
+
+    def test_empty_string():
+>       assert string_subsets("") == [""]
+E       AssertionError: assert [] == ['']
+E         
+E         Right contains one more item: ''
+E         Use -v to get more diff
+
+program15/program15_test.py:5: AssertionError
+_______________________________ test_single_char _______________________________
+
+    def test_single_char():
+>       assert string_subsets("a") == ["", "a"]
+E       AssertionError: assert ['a'] == ['', 'a']
+E         
+E         At index 0 diff: 'a' != ''
+E         Right contains one more item: 'a'
+E         Use -v to get more diff
+
+program15/program15_test.py:8: AssertionError
+_____________________________ test_multiple_chars ______________________________
+
+    def test_multiple_chars():
+>       assert string_subsets("abc") == ["", "a", "ab", "abc"]
+E       AssertionError: assert ['a', 'ab', 'abc'] == ['', 'a', 'ab', 'abc']
+E         
+E         At index 0 diff: 'a' != ''
+E         Right contains one more item: 'abc'
+E         Use -v to get more diff
+
+program15/program15_test.py:11: AssertionError
+_____________________________ test_duplicate_chars _____________________________
+
+    def test_duplicate_chars():
+>       assert string_subsets("aaa") == ["", "a", "aa", "aaa"]
+E       AssertionError: assert ['a', 'aa', 'aaa'] == ['', 'a', 'aa', 'aaa']
+E         
+E         At index 0 diff: 'a' != ''
+E         Right contains one more item: 'aaa'
+E         Use -v to get more diff
+
+program15/program15_test.py:14: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program15/program15.py            5      0      2      0   100%
+program15/program15_test.py       9      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            14      0      2      0   100%
+
+=========================== short test summary info ============================
+FAILED program15/program15_test.py::test_empty_string - AssertionError: asser...
+FAILED program15/program15_test.py::test_single_char - AssertionError: assert...
+FAILED program15/program15_test.py::test_multiple_chars - AssertionError: ass...
+FAILED program15/program15_test.py::test_duplicate_chars - AssertionError: as...
+============================== 4 failed in 0.42s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program16/program16_test.py F                                            [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_join_range ________________________________
+
+    def test_join_range():
+        # Basic test
+        assert join_range(5) == "0 1 2 3 4 5"
+    
+        # Test with 0
+        assert join_range(0) == "0"
+    
+        # Test with negative number
+        try:
+            join_range(-1)
+>           assert False, "Did not raise ValueError"
+E           AssertionError: Did not raise ValueError
+E           assert False
+
+program16/program16_test.py:13: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program16/program16.py            2      0      2      0   100%
+program16/program16_test.py      14      6      0      0    57%
+---------------------------------------------------------------
+TOTAL                            16      6      2      0    67%
+
+=========================== short test summary info ============================
+FAILED program16/program16_test.py::test_join_range - AssertionError: Did not...
+============================== 1 failed in 0.14s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 7 items
+
+program17/program17_test.py ..FFFFF                                      [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_duplicate_letters ____________________________
+
+    def test_duplicate_letters():
+>       assert count_unique_letters("hello") == 2
+E       AssertionError: assert 4 == 2
+E        +  where 4 = count_unique_letters('hello')
+
+program17/program17_test.py:11: AssertionError
+_____________________________ test_Different_cases _____________________________
+
+    def test_Different_cases():
+>       assert count_unique_letters("HeLlo") == 2
+E       AssertionError: assert 4 == 2
+E        +  where 4 = count_unique_letters('HeLlo')
+
+program17/program17_test.py:14: AssertionError
+_______________________________ test_with_spaces _______________________________
+
+    def test_with_spaces():
+>       assert count_unique_letters("Hi There") == 5
+E       AssertionError: assert 6 == 5
+E        +  where 6 = count_unique_letters('Hi There')
+
+program17/program17_test.py:17: AssertionError
+____________________________ test_with_punctuation _____________________________
+
+    def test_with_punctuation():
+>       assert count_unique_letters("Hi, there!") == 7
+E       AssertionError: assert 8 == 7
+E        +  where 8 = count_unique_letters('Hi, there!')
+
+program17/program17_test.py:20: AssertionError
+______________________________ test_with_numbers _______________________________
+
+    def test_with_numbers():
+>       assert count_unique_letters("CS50 2023") == 9
+E       AssertionError: assert 7 == 9
+E        +  where 7 = count_unique_letters('CS50 2023')
+
+program17/program17_test.py:23: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program17/program17.py            2      0      0      0   100%
+program17/program17_test.py      16      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            18      0      0      0   100%
+
+=========================== short test summary info ============================
+FAILED program17/program17_test.py::test_duplicate_letters - AssertionError: ...
+FAILED program17/program17_test.py::test_Different_cases - AssertionError: as...
+FAILED program17/program17_test.py::test_with_spaces - AssertionError: assert...
+FAILED program17/program17_test.py::test_with_punctuation - AssertionError: a...
+FAILED program17/program17_test.py::test_with_numbers - AssertionError: asser...
+========================= 5 failed, 2 passed in 0.27s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program18/program18_test.py .....                                        [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program18/program18.py            3      0      2      0   100%
+program18/program18_test.py      13      0      2      0   100%
+---------------------------------------------------------------
+TOTAL                            16      0      4      0   100%
+
+
+============================== 5 passed in 0.16s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program19/program19_test.py .....                                        [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program19/program19.py            6      0      4      0   100%
+program19/program19_test.py      22      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            28      0      4      0   100%
+
+
+============================== 5 passed in 0.19s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program20/program20_test.py ..F.                                         [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_multiple_numbers _____________________________
+
+numbers = 'nine two five three'
+
+    def test_multiple_numbers(numbers):
+>       assert sort_numbers(numbers) == "three five nine"
+E       AssertionError: assert 'two three five nine' == 'three five nine'
+E         
+E         - three five nine
+E         + two three five nine
+E         ? ++++
+
+program20/program20_test.py:17: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program20/program20.py            3      0      2      0   100%
+program20/program20_test.py      17      0      4      0   100%
+---------------------------------------------------------------
+TOTAL                            20      0      6      0   100%
+
+=========================== short test summary info ============================
+FAILED program20/program20_test.py::test_multiple_numbers - AssertionError: a...
+========================= 1 failed, 3 passed in 0.21s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 7 items
+
+program21/program21_test.py ...FFFF                                      [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_simple_list _______________________________
+
+    def test_simple_list():
+        numbers = [1, 3, 5, 7]
+>       assert closest_pair(numbers) == (3, 5)
+E       assert (1, 3) == (3, 5)
+E         
+E         At index 0 diff: 1 != 3
+E         Use -v to get more diff
+
+program21/program21_test.py:22: AssertionError
+___________________________ test_duplicate_elements ____________________________
+
+    def test_duplicate_elements():
+        numbers = [1, 3, 3, 7]
+>       assert closest_pair(numbers) in [(1, 3), (3, 7)]
+E       assert (3, 3) in [(1, 3), (3, 7)]
+E        +  where (3, 3) = closest_pair([1, 3, 3, 7])
+
+program21/program21_test.py:27: AssertionError
+____________________ test_various_lists[numbers0-expected0] ____________________
+
+numbers = [1, 2, 5, 9, 10], expected = (2, 5)
+
+    @pytest.mark.parametrize("numbers, expected", [
+        ([1, 2, 5, 9, 10], (2, 5)),
+        ([-5, -3, 0, 4, 9], (-3, 0))
+    ])
+    def test_various_lists(numbers, expected):
+>       assert closest_pair(numbers) == expected
+E       assert (1, 2) == (2, 5)
+E         
+E         At index 0 diff: 1 != 2
+E         Use -v to get more diff
+
+program21/program21_test.py:35: AssertionError
+____________________ test_various_lists[numbers1-expected1] ____________________
+
+numbers = [-5, -3, 0, 4, 9], expected = (-3, 0)
+
+    @pytest.mark.parametrize("numbers, expected", [
+        ([1, 2, 5, 9, 10], (2, 5)),
+        ([-5, -3, 0, 4, 9], (-3, 0))
+    ])
+    def test_various_lists(numbers, expected):
+>       assert closest_pair(numbers) == expected
+E       assert (-5, -3) == (-3, 0)
+E         
+E         At index 0 diff: -5 != -3
+E         Use -v to get more diff
+
+program21/program21_test.py:35: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program21/program21.py           14      0     10      0   100%
+program21/program21_test.py      20      0      2      0   100%
+---------------------------------------------------------------
+TOTAL                            34      0     12      0   100%
+
+=========================== short test summary info ============================
+FAILED program21/program21_test.py::test_simple_list - assert (1, 3) == (3, 5)
+FAILED program21/program21_test.py::test_duplicate_elements - assert (3, 3) i...
+FAILED program21/program21_test.py::test_various_lists[numbers0-expected0] - ...
+FAILED program21/program21_test.py::test_various_lists[numbers1-expected1] - ...
+========================= 4 failed, 3 passed in 0.23s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 6 items
+
+program22/program22_test.py FFFFF.                                       [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_empty_list ________________________________
+
+    def test_empty_list():
+        numbers = []
+>       assert normalize_numbers(numbers) == []
+
+program22/program22_test.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+numbers = []
+
+    def normalize_numbers(numbers):
+>       min_number = min(numbers)
+E       ValueError: min() arg is an empty sequence
+
+program22/program22.py:2: ValueError
+______________________________ test_single_number ______________________________
+
+    def test_single_number():
+        numbers = [5]
+>       assert normalize_numbers(numbers) == [1.0]
+
+program22/program22_test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+program22/program22.py:4: in normalize_numbers
+    return [(x - min_number) / (max_number - min_number) for x in numbers]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x1038e1ed0>
+
+>   return [(x - min_number) / (max_number - min_number) for x in numbers]
+E   ZeroDivisionError: division by zero
+
+program22/program22.py:4: ZeroDivisionError
+_____________________________ test_all_same_number _____________________________
+
+    def test_all_same_number():
+        numbers = [5, 5, 5]
+>       assert normalize_numbers(numbers) == [1.0, 1.0, 1.0]
+
+program22/program22_test.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+program22/program22.py:4: in normalize_numbers
+    return [(x - min_number) / (max_number - min_number) for x in numbers]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x1038b30d0>
+
+>   return [(x - min_number) / (max_number - min_number) for x in numbers]
+E   ZeroDivisionError: division by zero
+
+program22/program22.py:4: ZeroDivisionError
+______________________________ test_mixed_numbers ______________________________
+
+    def test_mixed_numbers():
+        numbers = [1, 5, 10]
+        expected = [0.0, 0.5, 1.0]
+>       assert normalize_numbers(numbers) == expected
+E       assert [0.0, 0.4444444444444444, 1.0] == [0.0, 0.5, 1.0]
+E         
+E         At index 1 diff: 0.4444444444444444 != 0.5
+E         Use -v to get more diff
+
+program22/program22_test.py:19: AssertionError
+_________________________________ test_min_max _________________________________
+
+    def test_min_max():
+        numbers = [-10, 100, 50]
+        expected = [0.0, 1.0, 0.6]
+>       assert normalize_numbers(numbers) == expected
+E       assert [0.0, 1.0, 0.5454545454545454] == [0.0, 1.0, 0.6]
+E         
+E         At index 2 diff: 0.5454545454545454 != 0.6
+E         Use -v to get more diff
+
+program22/program22_test.py:24: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program22/program22.py            4      0      2      0   100%
+program22/program22_test.py      23      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            27      0      2      0   100%
+
+=========================== short test summary info ============================
+FAILED program22/program22_test.py::test_empty_list - ValueError: min() arg i...
+FAILED program22/program22_test.py::test_single_number - ZeroDivisionError: d...
+FAILED program22/program22_test.py::test_all_same_number - ZeroDivisionError:...
+FAILED program22/program22_test.py::test_mixed_numbers - assert [0.0, 0.44444...
+FAILED program22/program22_test.py::test_min_max - assert [0.0, 1.0, 0.545454...
+========================= 5 failed, 1 passed in 0.40s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program23/program23_test.py ....                                         [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program23/program23.py            2      0      2      0   100%
+program23/program23_test.py      10      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            12      0      2      0   100%
+
+
+============================== 4 passed in 0.20s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program24/program24_test.py ....                                         [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program24/program24.py            2      0      0      0   100%
+program24/program24_test.py      11      0      2      0   100%
+---------------------------------------------------------------
+TOTAL                            13      0      2      0   100%
+
+
+============================== 4 passed in 0.17s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program25/program25_test.py ..FFF                                        [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_largest_factor[100-25] __________________________
+
+n = 100, expected = 25
+
+    @pytest.mark.parametrize("n, expected", [
+        (10, 5),
+        (15, 5),
+        (100, 25)
+    ])
+    def test_largest_factor(n, expected):
+>       assert largest_factor(n) == expected
+E       assert 50 == 25
+E        +  where 50 = largest_factor(100)
+
+program25/program25_test.py:11: AssertionError
+________________________________ test_negative _________________________________
+
+    def test_negative():
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+program25/program25_test.py:14: Failed
+__________________________________ test_zero ___________________________________
+
+    def test_zero():
+>       assert largest_factor(0) == 0
+E       assert None == 0
+E        +  where None = largest_factor(0)
+
+program25/program25_test.py:18: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program25/program25.py            4      0      4      0   100%
+program25/program25_test.py      10      0      4      0   100%
+---------------------------------------------------------------
+TOTAL                            14      0      8      0   100%
+
+=========================== short test summary info ============================
+FAILED program25/program25_test.py::test_largest_factor[100-25] - assert 50 =...
+FAILED program25/program25_test.py::test_negative - Failed: DID NOT RAISE <cl...
+FAILED program25/program25_test.py::test_zero - assert None == 0
+========================= 3 failed, 2 passed in 0.20s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 2 items
+
+program26/program26_test.py ..                                           [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program26/program26.py           12      0      6      0   100%
+program26/program26_test.py      11      0      2      0   100%
+---------------------------------------------------------------
+TOTAL                            23      0      8      0   100%
+
+
+============================== 2 passed in 0.19s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program27/program27_test.py ....                                         [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program27/program27.py            4      2      2      0    33%
+program27/program27_test.py      21      0      2      0   100%
+---------------------------------------------------------------
+TOTAL                            25      2      4      0    86%
+
+
+============================== 4 passed in 0.20s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program28/program28_test.py F                                            [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_swap_case ________________________________
+
+    def test_swap_case():
+        assert swap_case("Hello") == "hELLO"
+        assert swap_case("Goodbye") == "gOODBYE"
+>       assert swap_case("MiXeD cAsE") == "mIXeD CAsE"
+E       AssertionError: assert 'mIxEd CaSe' == 'mIXeD CAsE'
+E         
+E         - mIXeD CAsE
+E         + mIxEd CaSe
+
+program28/program28_test.py:7: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program28/program28.py            2      0      0      0   100%
+program28/program28_test.py       8      2      0      0    75%
+---------------------------------------------------------------
+TOTAL                            10      2      0      0    80%
+
+=========================== short test summary info ============================
+FAILED program28/program28_test.py::test_swap_case - AssertionError: assert '...
+============================== 1 failed in 0.14s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program29/program29_test.py ....                                         [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program29/program29.py            2      0      0      0   100%
+program29/program29_test.py      10      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            12      0      0      0   100%
+
+
+============================== 4 passed in 0.43s ===============================
+/Users/muaawiyah/Desktop/humaneval/myenv/lib/python3.11/site-packages/coverage/control.py:887: CoverageWarning: No data was collected. (no-data-collected)
+  self._warn("No data was collected.", slug="no-data-collected")
+/Users/muaawiyah/Desktop/humaneval/myenv/lib/python3.11/site-packages/coverage/report_core.py:109: CoverageWarning: Couldn't parse Python file '/Users/muaawiyah/Desktop/humaneval/program30/program30_test.py' (couldnt-parse)
+  coverage._warn(msg, slug="couldnt-parse")
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting program30/program30_test.py _________________
+myenv/lib/python3.11/site-packages/_pytest/python.py:520: in importtestmodule
+    mod = import_path(
+myenv/lib/python3.11/site-packages/_pytest/pathlib.py:584: in import_path
+    importlib.import_module(module_name)
+/opt/anaconda3/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1204: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1176: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1147: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:690: in _load_unlocked
+    ???
+myenv/lib/python3.11/site-packages/_pytest/assertion/rewrite.py:169: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+myenv/lib/python3.11/site-packages/_pytest/assertion/rewrite.py:351: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+/opt/anaconda3/lib/python3.11/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/Users/muaawiyah/Desktop/humaneval/program30/program30_test.py", line 8
+E       result = func(strings, prefix)
+E                                     ^
+E   IndentationError: unindent does not match any outer indentation level
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                     Stmts   Miss  Cover
+--------------------------------------------
+program30/program30.py       2      2     0%
+--------------------------------------------
+TOTAL                        2      2     0%
+
+=========================== short test summary info ============================
+ERROR program30/program30_test.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 1.08s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program31/program31_test.py .....                                        [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program31/program31.py            2      0      2      0   100%
+program31/program31_test.py      10      0      4      0   100%
+---------------------------------------------------------------
+TOTAL                            12      0      6      0   100%
+
+
+============================== 5 passed in 0.21s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program32/program32_test.py .                                            [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program32/program32.py            7      1      6      1    85%
+program32/program32_test.py      14      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            21      1      6      1    93%
+
+
+============================== 1 passed in 0.44s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program33/program33_test.py F                                            [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_bisect __________________________________
+
+    def test_bisect():
+        xs = [1, -2, 3]
+    
+        # Basic test with known root
+>       assert bisect(xs) == pytest.approx(-1)
+
+program33/program33_test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+program33/program33.py:4: in bisect
+    while poly(xs, begin) * poly(xs, end) > 0:
+program33/program33.py:17: in poly
+    return sum(c * (x**i) for i, c in enumerate(xs))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <enumerate object at 0x10a222570>
+
+>   return sum(c * (x**i) for i, c in enumerate(xs))
+E   OverflowError: (34, 'Result too large')
+
+program33/program33.py:17: OverflowError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program33/program33.py           13      6      8      1    48%
+program33/program33_test.py      12      7      2      0    36%
+---------------------------------------------------------------
+TOTAL                            25     13     10      1    43%
+
+=========================== short test summary info ============================
+FAILED program33/program33_test.py::test_bisect - OverflowError: (34, 'Result...
+============================== 1 failed in 0.37s ===============================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 6 items
+
+program34/program34_test.py ...FF.                                       [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_unsorted_list ______________________________
+
+    def test_unsorted_list():
+        test_list = [3,1,2,6,5,4]
+>       assert sort_list_every_third(test_list) == [1,2,3,6,5,4]
+E       assert [3, 1, 2, 6, 5, 4] == [1, 2, 3, 6, 5, 4]
+E         
+E         At index 0 diff: 3 != 1
+E         Use -v to get more diff
+
+program34/program34_test.py:17: AssertionError
+_______________________________ test_mixed_types _______________________________
+
+    def test_mixed_types():
+        test_list = [3,"a",2,6,5,4]
+>       with pytest.raises(TypeError):
+E       Failed: DID NOT RAISE <class 'TypeError'>
+
+program34/program34_test.py:21: Failed
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program34/program34.py            4      0      0      0   100%
+program34/program34_test.py      19      0      4      0   100%
+---------------------------------------------------------------
+TOTAL                            23      0      4      0   100%
+
+=========================== short test summary info ============================
+FAILED program34/program34_test.py::test_unsorted_list - assert [3, 1, 2, 6, ...
+FAILED program34/program34_test.py::test_mixed_types - Failed: DID NOT RAISE ...
+========================= 2 failed, 4 passed in 0.35s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 5 items
+
+program35/program35_test.py ....F                                        [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_mixed_types _______________________________
+
+    def test_mixed_types():
+>       assert remove_duplicates([1, "a", 2, "b"]) == [1, 2, "a", "b"]
+
+program35/program35_test.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = [1, 'a', 2, 'b']
+
+    def remove_duplicates(l):
+>       return sorted(list(set(l)))
+E       TypeError: '<' not supported between instances of 'str' and 'int'
+
+program35/program35.py:2: TypeError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program35/program35.py            2      0      0      0   100%
+program35/program35_test.py      12      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            14      0      0      0   100%
+
+=========================== short test summary info ============================
+FAILED program35/program35_test.py::test_mixed_types - TypeError: '<' not sup...
+========================= 1 failed, 4 passed in 0.30s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 7 items
+
+program36/program36_test.py F......                                      [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_max_empty_list ______________________________
+
+    def test_max_empty_list():
+>       assert max_element([]) == None
+
+program36/program36_test.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = []
+
+    def max_element(l):
+>       m = l[0]
+E       IndexError: list index out of range
+
+program36/program36.py:2: IndexError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program36/program36.py            6      0      4      0   100%
+program36/program36_test.py      16      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            22      0      4      0   100%
+
+=========================== short test summary info ============================
+FAILED program36/program36_test.py::test_max_empty_list - IndexError: list in...
+========================= 1 failed, 6 passed in 0.50s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 4 items
+
+program37/program37_test.py ..FF                                         [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_one_seven ________________________________
+
+    def test_one_seven():
+        n = 77
+>       assert count_sevens_in_multiples(n) == 1
+E       assert 0 == 1
+E        +  where 0 = count_sevens_in_multiples(77)
+
+program37/program37_test.py:14: AssertionError
+_____________________________ test_multiple_sevens _____________________________
+
+    def test_multiple_sevens():
+        n = 300
+>       assert count_sevens_in_multiples(n) == 2
+E       assert 10 == 2
+E        +  where 10 = count_sevens_in_multiples(300)
+
+program37/program37_test.py:18: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program37/program37.py           10      0      6      0   100%
+program37/program37_test.py      14      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            24      0      6      0   100%
+
+=========================== short test summary info ============================
+FAILED program37/program37_test.py::test_one_seven - assert 0 == 1
+FAILED program37/program37_test.py::test_multiple_sevens - assert 10 == 2
+========================= 2 failed, 2 passed in 0.34s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 6 items
+
+program38/program38_test.py F....F                                       [100%]
+
+=================================== FAILURES ===================================
+__________________________________ test_basic __________________________________
+
+    def test_basic():
+>       assert sort_even_odd([5, 3, 2, 8, 1, 4]) == [2, 3, 4, 5, 8, 1]
+E       assert [1, 3, 2, 8, 5, 4] == [2, 3, 4, 5, 8, 1]
+E         
+E         At index 0 diff: 1 != 2
+E         Use -v to get more diff
+
+program38/program38_test.py:6: AssertionError
+________________________________ test_more_odds ________________________________
+
+    def test_more_odds():
+>       assert sort_even_odd([5, 3]) == [3, 5]
+E       assert [5, 3] == [3, 5]
+E         
+E         At index 0 diff: 5 != 3
+E         Use -v to get more diff
+
+program38/program38_test.py:21: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program38/program38.py           10      0      4      0   100%
+program38/program38_test.py      14      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            24      0      4      0   100%
+
+=========================== short test summary info ============================
+FAILED program38/program38_test.py::test_basic - assert [1, 3, 2, 8, 5, 4] ==...
+FAILED program38/program38_test.py::test_more_odds - assert [5, 3] == [3, 5]
+========================= 2 failed, 4 passed in 0.28s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 6 items
+
+program39/program39_test.py ...FFF                                       [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_encode_sentence _____________________________
+
+    def test_encode_sentence():
+>       assert encode("This is a test") == "Uijt!jt!b!uftu"
+E       assert 'Vjku"ku"c"vguv' == 'Uijt!jt!b!uftu'
+E         
+E         - Uijt!jt!b!uftu
+E         + Vjku"ku"c"vguv
+
+program39/program39_test.py:14: AssertionError
+______________________________ test_encode_cyclic ______________________________
+
+    def test_encode_cyclic():
+>       assert encode("z") == "b"
+E       AssertionError: assert '|' == 'b'
+E         
+E         - b
+E         + |
+
+program39/program39_test.py:17: AssertionError
+______________________________ test_decode_encode ______________________________
+
+    def test_decode_encode():
+        text = "Hello World"
+        encoded = encode(text)
+>       assert encode(encoded) == text
+E       AssertionError: assert 'Lipps$[svph' == 'Hello World'
+E         
+E         - Hello World
+E         + Lipps$[svph
+
+program39/program39_test.py:23: AssertionError
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program39/program39.py            7      0      2      0   100%
+program39/program39_test.py      17      1      0      0    94%
+---------------------------------------------------------------
+TOTAL                            24      1      2      0    96%
+
+=========================== short test summary info ============================
+FAILED program39/program39_test.py::test_encode_sentence - assert 'Vjku"ku"c"...
+FAILED program39/program39_test.py::test_encode_cyclic - AssertionError: asse...
+FAILED program39/program39_test.py::test_decode_encode - AssertionError: asse...
+========================= 3 failed, 3 passed in 0.28s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.11.7, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/muaawiyah/Desktop/humaneval
+plugins: anyio-4.3.0, cov-4.1.0
+collected 1 item
+
+program40/program40_test.py .                                            [100%]
+
+---------- coverage: platform darwin, python 3.11.7-final-0 ----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+program40/program40.py            8      0      6      0   100%
+program40/program40_test.py      14      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                            22      0      6      0   100%
+
+
+============================== 1 passed in 0.10s ===============================
