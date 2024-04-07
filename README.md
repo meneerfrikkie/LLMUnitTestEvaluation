@@ -15,12 +15,18 @@ This repository contains scripts and data files related to the ELEN4010 Individu
 
 ## Files
 
-1. `loadHumanEval.py`:
-2. `generateUnitTests.py`
-3. `runTests.sh`
-4. `testResults.txt`
-5. `database.pdf`: PDF version of the project database.
-6. `database.csv`: CSV version of the project database.
+### `src` Directory
+
+1. `loadHumanEval.py`: This script is utilized to extract Python programs from the HumanEval dataset.
+2. `generateUnitTests.py`: This script utilizes Anthropic's Claude 2.0 API to automatically generate unit tests.
+3. `runTests.sh`: This script utilizes Python plugin tools to run unit test metrics.
+
+### `data` Directory
+
+1. `testResults.txt`: File containing test results.
+2. `database.pdf`: PDF version of the project database.
+3. `database.csv`: CSV version of the project database.
+4. `report.pdf`: A copy of the Investigation Report.
 
 ---
 
