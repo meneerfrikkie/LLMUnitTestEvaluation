@@ -44,9 +44,18 @@ The script `loadHumanEval.py` has been provided by T. Kolia (Student Number: 242
      ```
 
 2. **Running the scripts:**
-   - Execute `loadHumanEval.py` by running: ```bash python loadHumanEval.py```
-   - Execute `generateUnitTests.py` by running: ```bash python generateUnitTests.py```
-   - Execute `runTests.sh` by running: ```bash ./runTests.sh```
+   - Execute `loadHumanEval.py` by running:
+     ```bash
+     python loadHumanEval.py
+     ```
+   - Execute `generateUnitTests.py` by running:
+     ```bash
+     python generateUnitTests.py
+     ```
+   - Execute `runTests.sh` by running:
+     ```bash
+     ./runTests.sh
+     ```
    - View generated outputs in `testResults.txt`.
    - Utilize `database.pdf` and `database.csv` for reference or analysis.
 
